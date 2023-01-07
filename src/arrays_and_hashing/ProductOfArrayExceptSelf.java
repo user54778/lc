@@ -1,5 +1,7 @@
 package arrays_and_hashing;
 
+import java.util.Arrays;
+
 public class ProductOfArrayExceptSelf {
 
     /**
@@ -32,6 +34,28 @@ public class ProductOfArrayExceptSelf {
             output[i] = left[i] * right[i];
         }
 
+        return output;
+    }
+
+    // O(N) Time O(1) Space solution
+    public int[] productExceptSelf2(int[] nums) {
+        int[] output = new int[nums.length];    // problem states output array does NOT count as extra space
+
+        Arrays.fill(output, 1);
+
+        // prefix
+        int left = 1;
+        for (int i = 0; i < nums.length; i++) {
+            output[i] *= left;
+            left *= nums[i];
+        }
+
+        // postfix
+        int right = 1;
+        for (int i = nums.length - 1; i >= 0; i--) {
+            output[i] *= right;
+            right *= nums[i];
+        }
         return output;
     }
 }
