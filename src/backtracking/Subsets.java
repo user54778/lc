@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Subsets {
+
     public List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> res = new ArrayList<>();
         List<Integer> list = new ArrayList<>();
@@ -14,7 +15,7 @@ public class Subsets {
 
     /**
      * Helper method that utilizes backtracking based on the decision to include or exclude the
-     * element from the set
+     * element from the subset
      * @param res resultant list to return in our main method
      * @param decision decision index
      * @param nums input array
