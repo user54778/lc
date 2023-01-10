@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ThreeSum {
-    public List<List<Integer>> threeSum(int[] nums) {
+    public static List<List<Integer>> threeSum(int[] nums) {
         Arrays.sort(nums);  // sort input array to help with duplicates
         List<List<Integer>> res = new ArrayList<>();
         for (int i = 0; i < nums.length; i++) {
@@ -16,7 +16,7 @@ public class ThreeSum {
             // two pointer solution to solve 2 Sum for remaining array
             int low = i + 1;
             int high = nums.length - 1;
-            int target = 0;
+            int target;
             while (low < high) {
                 target = nums[i] + nums[low] + nums[high]; // target value 0
 
@@ -35,5 +35,10 @@ public class ThreeSum {
         }
 
         return res;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = new int[] {1, 2, -2, -1};
+        System.out.println(threeSum(nums));
     }
 }
