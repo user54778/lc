@@ -82,7 +82,7 @@ public class RodCutting {
         for (int i = 1; i <= rodLength; i++) {
             int maxRevenue = Integer.MIN_VALUE; // reset our maxRevenue per increasing sub-problem
             /*
-             * Iterate in order of each sub-problem of the rodlengths
+             * Iterate in order of each sub-problem of the rod lengths
              */
             for (int j = 1; j <= i; j++) {  // j is position of the first cut
                 // directly reference our memo array to solve each sub-problem of size i - j
@@ -95,7 +95,8 @@ public class RodCutting {
 
     public static void main(String[] args) {
         int[] prices = new int[] {1, 5, 8, 9, 10, 17, 17, 20};
-        System.out.println(topDownCutRod(prices, 2));
-        System.out.println(bottomUpCutRod(prices, 2));
+        System.out.println(topDownCutRod(prices, 4));
+        System.out.println(bottomUpCutRod(prices, 4));
+        System.out.println(bottomUpCutRod(prices, 4));
     }
 }
