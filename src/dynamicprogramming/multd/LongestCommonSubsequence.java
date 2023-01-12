@@ -23,7 +23,7 @@ public class LongestCommonSubsequence {
      * @param cache cache; 2 dimensional since we have two states
      * @param str1 first string
      * @param str2 second string
-     * @return lcs
+     * @return lcs, bottom right
      */
     private int dp(int i, int j, int[][] cache, String str1, String str2) {
         if (i >= str1.length() || j >= str2.length()) {
