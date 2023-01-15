@@ -17,7 +17,7 @@ public class LongestCommonSubsequence {
     }
 
     /**
-     * Memoize our solution using a 2-d array/
+     * Memoize our solution using a 2-d array
      * @param i first state
      * @param j second state
      * @param cache cache; 2 dimensional since we have two states

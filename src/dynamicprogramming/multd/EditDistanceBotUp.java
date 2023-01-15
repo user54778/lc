@@ -22,6 +22,7 @@ public class EditDistanceBotUp {
             dp[i][c] = r - i;
         }
 
+        // end of index; return remaining length of the word
         for (int j = 0; j <= c; j++) {
             dp[r][j] = c - j;
         }

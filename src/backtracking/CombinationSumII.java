@@ -20,9 +20,8 @@ public class CombinationSumII {
             ans.add(new ArrayList<>(uniqueC));   // add set of numbers adding to target
         } else {
             for (int i = index; i < candidates.length; i++) {
-                if (i > index && candidates[i] == candidates[i - 1]) {
-                    continue; // duplicate
-                } else if (total > target){
+                if (i > index && candidates[i] == candidates[i - 1]) continue; // duplicate
+                else if (total > target){
                     return; // TLE if we don't check this case
                 } else {
                     uniqueC.add(candidates[i]);

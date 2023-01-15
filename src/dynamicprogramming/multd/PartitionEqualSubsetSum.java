@@ -34,7 +34,7 @@ public class PartitionEqualSubsetSum {
             return cache[n][subSetSum];
         } else {
             // recurrence -> dfs on our subset tree
-            // choice -> INCLUDE this sub sum, or DONT include
+            // choice -> INCLUDE this sub sum, or DON'T include
             cache[n][subSetSum] = dp(n - 1, subSetSum - nums[n - 1], cache, nums)
                     || dp(n - 1, subSetSum, cache, nums);
 
