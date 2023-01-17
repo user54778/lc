@@ -5,7 +5,11 @@ public class FlipStringtoMonotoneIncreasing {
         // two states -> remaining input string, current bit value
         int[][] dp = new int[s.length() + 1][2];
 
-        // base case -> min number of flips is 0 characters; empty string
+        /*
+         * Represent min number of flips if ith character is 0 or 1.
+         * Base Case -> First i characters are not monotone increasing: require i flips to make
+         * them monotone increasing.
+         */
         for (int i = 0; i <= s.length(); i++) {
             dp[i][0] = i;
             dp[i][1] = i;
@@ -19,5 +23,9 @@ public class FlipStringtoMonotoneIncreasing {
         }
 
         return Math.min(dp[s.length()][0], dp[s.length()][1]);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new FlipStringtoMonotoneIncreasing().minFlipsMonoIncr("00110")); // 1
     }
 }
