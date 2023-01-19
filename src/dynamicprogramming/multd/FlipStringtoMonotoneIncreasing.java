@@ -6,7 +6,6 @@ public class FlipStringtoMonotoneIncreasing {
         int[][] dp = new int[s.length() + 1][2];
 
         /*
-         * Represent min number of flips if ith character is 0 or 1.
          * Base Case -> First i characters are not monotone increasing: require i flips to make
          * them monotone increasing.
          */
